@@ -1,0 +1,3 @@
+1. Generar cuatro div en grid, dentro de esos cuatro grid en div otros cuatro
+2. luego hacer que al hacer click en el cuadrado aparezca en un div randomn
+3. el paso 2, se hace mediante una lista, que contenga el número de cuadrados en la cual cada cuadrado tiene asignado uno de esos números, un total de 16 números del 0 al 15

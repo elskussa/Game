@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.marco {
+    border: 2px solid gray;
+    height: 60vw;
+    width: 60vw;
+    position: relative;
+}
+
+.ventanas {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    grid-template-rows: 1fr 1fr; /* Dos filas de igual tamaño */
+    height: 100%; /* Ocupa todo el espacio del marco */
+    width: 100%;
+}
+
+.ventana {
+    position: relative;
+    border: 1px solid gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.munheco {
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    z-index: 1; /* Asegura que esté por encima de las ventanas */
+}
+
+.subventana {
+    border: solid 1px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subventana .munheco {
+    position: relative;
+    top: auto;
+    left: auto;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
