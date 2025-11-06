@@ -11,15 +11,18 @@ const imagenDesonrra = document.querySelector('.imagenDesonrra');
 const botonModoDificil = document.querySelector('.modoDificil')
 //variable que guarda la cantidad de muertes, para así hacer un sistema de muertes
 let numeroDeMuertes = 0;
+//variable que guarda el timeout del modo difícil
 let timeOutA = '';
 //Esta función mueve el muñeco de div, para simular la desaparición de un sitio y apareción en otro
+let puntos = 0;
 function moverMunheco() {
     event.stopPropagation();
     const numeroRandom = Math.floor(Math.random() * ventana.length);
     if(munheco) {//Este If es un poco inútil
         ventana[numeroRandom].appendChild(munheco);
+        puntos++;
     };
-    console.log(`muñeco movido a ventana ${numeroRandom}`)
+    console.log(`muñeco movido a ventana ${numeroRandom}`);
 };
 //Esta función vuelve a añadir el muñeco al espacio de ventanas
 function resetGame() {
@@ -27,6 +30,7 @@ function resetGame() {
     ventanas.appendChild(munheco);
     marcoAvisos.innerHTML = "";
     clearTimeout(timeOutA)
+    puntos = 0;
 };
 
 function modoDificil() {
@@ -37,7 +41,7 @@ function modoDificil() {
         }
         modoDificil()
         console.log(`el muñeco se ha movido solo a la ventana ${numeroRandom2}`)
-    },550);
+    },450);
     
 };
 //Esta función añade un listener a cada subventana, para así hacer la acción de fallo, al llegar a la cantidad de 3 fallos muestra una imagen en pantalla junto a un mensaje
@@ -62,6 +66,7 @@ subventana.forEach((element, i) => {
                     });
                 };
             };
+            puntos = 0;
             marcoAvisos.innerHTML = `Perdiste ${numeroDeMuertes} veces`;
             console.log(`has muerto ${numeroDeMuertes}`)
         });
@@ -81,4 +86,3 @@ munheco.onclick = moverMunheco;
 botonReset.onclick = resetGame;
 //Al hacer click se activa el modo difícil que hace que el munheco se mueva solo todo el rato
 botonModoDificil.onclick = modoDificil;
-
