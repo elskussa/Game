@@ -38,7 +38,7 @@ function modoDificil() {
     let numeroRandom2 = Math.floor(Math.random() * ventana.length);
     timeOutA = setTimeout(() => {
         if(munheco) {
-            ventana[numeroRandom2].appendChild(munheco);
+            moverMunheco()
         }
         modoDificil()
         console.log(`el muñeco se ha movido solo a la ventana ${numeroRandom2}`)
@@ -87,6 +87,7 @@ munheco.onclick = moverMunheco;
 botonReset.onclick = resetGame;
 //Al hacer click se activa el modo difícil que hace que el munheco se mueva solo todo el rato
 botonModoDificil.onclick = modoDificil;
+
 
 
 
