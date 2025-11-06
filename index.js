@@ -21,6 +21,7 @@ function moverMunheco() {
     if(munheco) {//Este If es un poco inútil
         ventana[numeroRandom].appendChild(munheco);
         puntos++;
+        marcoAvisos.innerHTML = `llevas ${puntos} puntos`;
     };
     console.log(`muñeco movido a ventana ${numeroRandom}`);
 };
@@ -86,3 +87,4 @@ munheco.onclick = moverMunheco;
 botonReset.onclick = resetGame;
 //Al hacer click se activa el modo difícil que hace que el munheco se mueva solo todo el rato
 botonModoDificil.onclick = modoDificil;
+
