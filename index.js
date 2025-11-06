@@ -37,7 +37,7 @@ function modoDificil() {
         }
         modoDificil()
         console.log(`el muñeco se ha movido solo a la ventana ${numeroRandom2}`)
-    },450);
+    },550);
     
 };
 //Esta función añade un listener a cada subventana, para así hacer la acción de fallo, al llegar a la cantidad de 3 fallos muestra una imagen en pantalla junto a un mensaje
@@ -81,3 +81,4 @@ munheco.onclick = moverMunheco;
 botonReset.onclick = resetGame;
 //Al hacer click se activa el modo difícil que hace que el munheco se mueva solo todo el rato
 botonModoDificil.onclick = modoDificil;
+
