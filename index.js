@@ -1,5 +1,5 @@
 //Importar elementos del DOM
-const ventana = document.querySelectorAll('.ventana');
+const ventana = document.querySelectorAll('.subventana');
 const munheco = document.querySelector('.munheco');
 const botonReset = document.querySelector('.botonReset');
 const marcoAvisos = document.querySelector('.avisos');
@@ -84,3 +84,4 @@ munheco.onclick = moverMunheco;
 botonReset.onclick = resetGame;
 //Al hacer click se activa el modo difícil que hace que el munheco se mueva solo todo el rato
 botonModoDificil.onclick = modoDificil;
+
