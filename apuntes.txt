@@ -1,3 +1,11 @@
 1. Generar cuatro div en grid, dentro de esos cuatro grid en div otros cuatro
 2. luego hacer que al hacer click en el cuadrado aparezca en un div randomn
 3. el paso 2, se hace mediante una lista, que contenga el número de cuadrados en la cual cada cuadrado tiene asignado uno de esos números, un total de 16 números del 0 al 15
+
+actualización
+
+1. Se generaron los cuatro div en grid con cuatro div dentro cada uno, un total de 16 div 4*4
+2. se creó una función que al hacer click mueve de contenedor el div titere "munheco"
+3. el document.querySelectorAll ya da una lista, y los elementos de esa lista tienen un índice, de forma que no hace falta crear la lista de forma manual, habría sido más complicado. En cambio
+	se ha utilizado la lista que devuelve document.querySelectorAll y se ha utilizado el índice de cada elemento.
+4. se ha añadido la función de revivir y un sistema de muertes
