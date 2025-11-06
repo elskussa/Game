@@ -1,7 +1,6 @@
 //Importar elementos del DOM
-const ventana = document.querySelectorAll('.subventana');
+const ventana = document.querySelectorAll('.ventana');
 const munheco = document.querySelector('.munheco');
-const subventana = document.querySelectorAll('.subventana');
 const botonReset = document.querySelector('.botonReset');
 const marcoAvisos = document.querySelector('.avisos');
 const ventanas = document.querySelector('.ventanas')
@@ -21,7 +20,6 @@ function moverMunheco() {
     if(munheco) {//Este If es un poco inútil
         ventana[numeroRandom].appendChild(munheco);
         puntos++;
-        marcoAvisos.innerHTML = `llevas ${puntos} puntos`;
     };
     console.log(`muñeco movido a ventana ${numeroRandom}`);
 };
@@ -38,15 +36,15 @@ function modoDificil() {
     let numeroRandom2 = Math.floor(Math.random() * ventana.length);
     timeOutA = setTimeout(() => {
         if(munheco) {
-            moverMunheco()
+            ventana[numeroRandom2].appendChild(munheco);
         }
         modoDificil()
         console.log(`el muñeco se ha movido solo a la ventana ${numeroRandom2}`)
     },1200);
     
 };
-//Esta función añade un listener a cada subventana, para así hacer la acción de fallo, al llegar a la cantidad de 3 fallos muestra una imagen en pantalla junto a un mensaje
-subventana.forEach((element, i) => {
+//Esta función añade un listener a cada ventana, para así hacer la acción de fallo, al llegar a la cantidad de 3 fallos muestra una imagen en pantalla junto a un mensaje
+ventana.forEach((element, i) => {
     if(!element.dataset.eventListenerAdded) {
         element.addEventListener('click', () => {
             botonReset.style.backgroundColor = 'red';
@@ -67,7 +65,6 @@ subventana.forEach((element, i) => {
                     });
                 };
             };
-            puntos = 0;
             marcoAvisos.innerHTML = `Perdiste ${numeroDeMuertes} veces`;
             console.log(`has muerto ${numeroDeMuertes}`)
         });
@@ -87,8 +84,3 @@ munheco.onclick = moverMunheco;
 botonReset.onclick = resetGame;
 //Al hacer click se activa el modo difícil que hace que el munheco se mueva solo todo el rato
 botonModoDificil.onclick = modoDificil;
-
-
-
-
-
