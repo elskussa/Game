@@ -68,7 +68,7 @@ body {
     max-height: 65px;
     min-width: 45px;
     min-height: 45px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .box2 {
@@ -84,7 +84,7 @@ body {
     max-height: 65px;
     min-width: 45px;
     min-height: 45px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 .nino {
@@ -212,4 +212,5 @@ button:hover {
         height: 40vw;
     }
 }
+
 
