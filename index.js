@@ -184,6 +184,7 @@ function resetGame() {
 
     points = 0;
     clearTimeout(timeoutA);
+    box.className = 'box';
     windowGame.appendChild(box);
     box.style.display = 'block';
 };
@@ -204,3 +205,4 @@ box.onclick = boxMove;
 resetGameButton.onclick = resetGame
 dModeButton.onclick = difficultMode;
 darkMode.onclick = switchBackgroundColor;
+
