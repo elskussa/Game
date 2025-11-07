@@ -1,84 +1,85 @@
 body {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.marc {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     height: 100vh;
     width: 100%;
 }
 
-.marco {
-    border: 2px solid gray;
+.points-notice-pmax {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+}
+
+.window {
+    border: 1px solid gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
     height: 40vw;
     width: 40vw;
-    position: relative;
 }
 
-.ventanas {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
-    grid-template-rows: 1fr 1fr; /* Dos filas de igual tamaño */
-    height: 100%; /* Ocupa todo el espacio del marco */
-    width: 100%;
-}
-
-.ventana {
-    position: relative;
-    border: 1px solid gray;
+.square {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
-.munheco {
+.subwindow {
+    /*border: 1px solid gray;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
     background-color: blue;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 70px;
-    height: 70px;
-    z-index: 1; /* Asegura que esté por encima de las ventanas */
+    height: 90px;
+    width: 90px;
 }
 
-.subventana {
-    border: solid 1px gray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.subventana .munheco {
-    position: relative;
-    top: auto;
-    left: auto;
-}
-
-.botones {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.imagenDesonrra {
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    flex-direction: column;
-    height: 300px;
-    width: 300px;
+.box2 {
     display: none;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    background-color: blue;
+    height: 90px;
+    width: 90px;
 }
 
-.textoImagenDesonrra {
-    text-align: center;
-}
-
-.imagenDesonrraNinho {
-    height: 300px;
-    width: auto;
+.nino {
     display: flex;
     justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    position: absolute;
+    z-index: 10;
 }
 
+.ninoImg {
+    height: 30vw;
+    width: auto;
+    position: absolute;
+    z-index: 11;
+}
 
+.buttons {
+    margin-top: 10px;
+}
