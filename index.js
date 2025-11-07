@@ -164,8 +164,8 @@ function resetGame() {
     zoneDeath.forEach(element  => {
         element.remove();
     })
-    box.removeAttribute('box');
-    box2.removeAttribute('box2');
+    box.removeAttribute('style');
+    box2.removeAttribute('style');
     box.className = 'box';
     box2.className = 'box2';
     maxPoints.push(points);
@@ -207,3 +207,4 @@ box.onclick = boxMove;
 resetGameButton.onclick = resetGame
 dModeButton.onclick = difficultMode;
 darkMode.onclick = switchBackgroundColor;
+
