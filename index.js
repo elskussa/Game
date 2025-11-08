@@ -23,7 +23,7 @@ let timeoutA = null;
 
 //Defino la función que mueve la caja entre las subventanas
 function boxMove() {
-    const randomNumber = Math.round(Math.random() * subwindow.length);
+    const randomNumber = Math.floor(Math.random() * subwindow.length);
 
     if(subwindow[randomNumber]) {
         subwindow[randomNumber].appendChild(box);
@@ -62,7 +62,7 @@ function boxMove() {
 
 //Defino la función que mueve automaticamente la caja
 function difficultMode() {
-    const randomNumber2 = Math.round(Math.random() * subwindow.length);
+    const randomNumber2 = Math.floor(Math.random() * subwindow.length);
 
     box.remove();
     box2.style.display = 'block';
@@ -100,19 +100,11 @@ function difficultMode() {
     };
 
     function boxMove2 () {
-        if(subwindow[randomNumber2]) {
-            subwindow[randomNumber2].appendChild(box2);
-        } else {
-            console.log('no existe');
-        }
-        console.log(`el cubo se ha modivo a la casilla ${randomNumber2}`);
+        subwindow[randomNumber2].appendChild(box2);
+        console.log(`se ha movido a la casilla ${randomNumber2}`);
     };
 
-    if(randomNumber2 < 1) {
-        console.log("es menor a 1");
-    } else {
-        boxMove2();
-    };
+    boxMove2();
 
     clearTimeout(timeoutA);
     timeoutA = setTimeout(() => {
