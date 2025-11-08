@@ -17,6 +17,7 @@ const resetGameButton = document.querySelector('.reset-game');
 let points = 0;
 let maxPoints = [];
 let failCounter = 0;
+let difficulty = 1200;
 
 //gurado el timeOut de el modo difícil
 let timeoutA = null;
@@ -109,7 +110,11 @@ function difficultMode() {
     clearTimeout(timeoutA);
     timeoutA = setTimeout(() => {
         difficultMode();
-    }, 900);
+        if(difficulty >= 300) {
+            difficulty = difficulty - 2.5;
+            console.log(`dificultad en ${difficulty}ms`);
+        }
+    }, difficulty);
 
 };
 
