@@ -118,7 +118,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     min-width: 120px;
-    border-radius: 8px; /* ← AÑADIDO */
+    border-radius: 8px;
     border: 1px solid gray;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -129,76 +129,135 @@ button:hover {
     padding: 11px 21px;
 }
 
-/* Para hacerlo responsive en diferentes tamaños */
+/* Media Queries para tablets */
 @media (max-width: 768px) {
-    button {
-        border-radius: 6px; /* Un poco más pequeño en tablets */
+    body {
+        padding: 15px;
     }
-}
-
-@media (max-width: 480px) {
-    button {
-        border-radius: 5px; /* Más pequeño en móviles */
+    
+    .marc {
+        padding: 15px;
+        min-height: 90vh;
     }
-}
-
-/* Media Queries para diferentes tamaños de pantalla */
-@media (max-width: 768px) {
+    
     .points-notice-pmax {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        margin-bottom: 15px;
+        gap: 8px;
     }
     
     .window {
-        width: 95vw;
-        height: 95vw;
+        width: 85vw;
+        height: 85vw;
+        max-width: 450px;
+        max-height: 450px;
     }
     
     .box, .box2 {
-        width: 15vw;
-        height: 15vw;
+        width: 14vw;
+        height: 14vw;
     }
     
     button {
-        padding: 12px 16px;
-        font-size: 14px;
-        min-width: 100px;
+        padding: 10px 16px;
+        font-size: 15px;
+        min-width: 110px;
+        border-radius: 6px;
+    }
+    
+    .buttons {
+        margin-top: 15px;
+        gap: 8px;
     }
 }
 
+/* Media Queries para móviles - INTERFAZ MÁS PEQUEÑA */
 @media (max-width: 480px) {
     body {
-        padding: 10px;
+        padding: 8px;
+        font-size: 14px;
     }
     
     .marc {
         padding: 10px;
+        min-height: 85vh;
+    }
+    
+    .points-notice-pmax {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 12px;
+        gap: 5px;
+        font-size: 14px;
     }
     
     .window {
-        width: 100vw;
-        height: 100vw;
-        border-radius: 10px;
+        width: 75vw;  /* Reducido de 100vw */
+        height: 75vw; /* Reducido de 100vw */
+        max-width: 350px; /* Reducido de 400px */
+        max-height: 350px; /* Reducido de 400px */
+        border-radius: 12px;
     }
     
     .box, .box2 {
-        width: 18vw;
-        height: 18vw;
+        width: 16vw;  /* Reducido */
+        height: 16vw; /* Reducido */
+        max-width: 55px; /* Reducido de 65px */
+        max-height: 55px; /* Reducido de 65px */
+        min-width: 35px; /* Reducido de 45px */
+        min-height: 35px; /* Reducido de 45px */
     }
     
     .buttons {
         flex-direction: column;
         width: 100%;
+        margin-top: 12px;
+        gap: 6px;
     }
     
     button {
         width: 100%;
-        padding: 14px;
+        padding: 10px 12px; /* Reducido */
+        font-size: 13px; /* Reducido */
+        min-width: auto;
+        border-radius: 5px;
     }
     
     .ninoImg {
-        width: 95vw;
+        width: 70vw; /* Reducido de 95vw */
+        max-width: 300px; /* Reducido de 400px */
+    }
+}
+
+/* Media Queries para móviles muy pequeños */
+@media (max-width: 360px) {
+    body {
+        padding: 5px;
+        font-size: 13px;
+    }
+    
+    .marc {
+        padding: 8px;
+        min-height: 80vh;
+    }
+    
+    .window {
+        width: 70vw;
+        height: 70vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    
+    .box, .box2 {
+        width: 18vw;
+        height: 18vw;
+        max-width: 50px;
+        max-height: 50px;
+    }
+    
+    button {
+        padding: 8px 10px;
+        font-size: 12px;
     }
 }
 
