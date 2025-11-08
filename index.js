@@ -23,7 +23,7 @@ let timeoutA = null;
 
 //Defino la función que mueve la caja entre las subventanas
 function boxMove() {
-    const randomNumber = Math.round(Math.random() * subwindow.length - 1);
+    const randomNumber = Math.round(Math.random() * subwindow.length);
     subwindow[randomNumber].appendChild(box);
 
     if (!box.dataset.eventListenerAdded) {
@@ -59,7 +59,7 @@ function boxMove() {
 
 //Defino la función que mueve automaticamente la caja
 function difficultMode() {
-    const randomNumber2 = Math.round(Math.random() * subwindow.length - 1);
+    const randomNumber2 = Math.round(Math.random() * subwindow.length);
 
     box.remove();
     box2.style.display = 'block';
@@ -230,3 +230,4 @@ box.onclick = boxMove;
 resetGameButton.onclick = resetGame
 dModeButton.onclick = difficultMode;
 darkMode.onclick = switchBackgroundColor;
+
