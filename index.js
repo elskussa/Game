@@ -23,7 +23,7 @@ let timeoutA = null;
 
 //Defino la función que mueve la caja entre las subventanas
 function boxMove() {
-    const randomNumber = Math.floor(Math.random() * subwindow.length);
+    const randomNumber = Math.round(Math.random() * subwindow.length - 1);
     subwindow[randomNumber].appendChild(box);
 
     if (!box.dataset.eventListenerAdded) {
@@ -59,7 +59,7 @@ function boxMove() {
 
 //Defino la función que mueve automaticamente la caja
 function difficultMode() {
-    const randomNumber2 = Math.floor(Math.random() * subwindow.length);
+    const randomNumber2 = Math.round(Math.random() * subwindow.length - 1);
 
     box.remove();
     box2.style.display = 'block';
@@ -98,6 +98,7 @@ function difficultMode() {
 
     function boxMove2 () {
         subwindow[randomNumber2].appendChild(box2);
+        console.log(`el cubo se ha modivo a la casilla ${randomNumber2}`);
     };
 
     boxMove2();
@@ -191,15 +192,36 @@ function resetGame() {
     box.style.display = 'block';
 };
 
+let github = document.createElement('a');
+github.style.width = '100%';
+github.target = '_blank';
+github.textContent = 'GitHub';
+github.className = 'github-perfil';
+github.href = 'https://github.com/elskussa';
+github.style.textDecoration = 'none';
+github.style.color = 'black';
+github.style.textAlign = 'center';
+github.style.textDecoration = 'none';
+
+const footer = document.querySelector('footer');
+footer.style.display = 'flex';
+footer.style.flexDirection = 'column';
+footer.style.justifyContent = 'center';
+footer.style.alignItems = 'center';
+footer.style.marginTop = '20px';
+
+footer.appendChild(github);
+
 //función para cambiar el fondo
 function switchBackgroundColor() {//chatGPT
     // Aplicar transición suave
     document.body.style.transition = 'all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-    
+
     // Pequeño retraso para mejor UX
     setTimeout(() => {
         document.body.style.backgroundColor = 'rgb(10, 21, 41)';
         document.body.style.color = 'white';
+        github.style.color = 'white';
     }, 50);
 }
 
@@ -207,4 +229,3 @@ box.onclick = boxMove;
 resetGameButton.onclick = resetGame
 dModeButton.onclick = difficultMode;
 darkMode.onclick = switchBackgroundColor;
-
