@@ -24,7 +24,10 @@ let timeoutA = null;
 //Defino la función que mueve la caja entre las subventanas
 function boxMove() {
     const randomNumber = Math.round(Math.random() * subwindow.length);
-    subwindow[randomNumber].appendChild(box);
+
+    if(subwindow[randomNumber]) {
+        subwindow[randomNumber].appendChild(box);
+    }
 
     if (!box.dataset.eventListenerAdded) {
         box.addEventListener('click', (event) => {
@@ -73,7 +76,7 @@ function difficultMode() {
                 pointsMarc.innerHTML = "llevas 1 punto";
             } else if (points > 1) {
                 pointsMarc.innerHTML = `llevas ${points} puntos`;
-            }
+            };
 
             event.stopPropagation();
 
@@ -97,22 +100,31 @@ function difficultMode() {
     };
 
     function boxMove2 () {
-        subwindow[randomNumber2].appendChild(box2);
+        if(subwindow[randomNumber2]) {
+            subwindow[randomNumber2].appendChild(box2);
+        } else {
+            console.log('no existe');
+        }
         console.log(`el cubo se ha modivo a la casilla ${randomNumber2}`);
     };
 
-    boxMove2();
+    if(randomNumber2 < 1) {
+        console.log("es menor a 1");
+    } else {
+        boxMove2();
+    };
 
     clearTimeout(timeoutA);
     timeoutA = setTimeout(() => {
-        difficultMode()
-    }, 1200);
+        difficultMode();
+    }, 900);
 
 };
 
 //event listener para indicar la subwindow en la que se falló
 subwindow.forEach((element, i) => {
     if(!element.dataset.eventListenerAdded) {
+
         element.addEventListener('click', () => {
 
             failCounter++;
@@ -230,4 +242,3 @@ box.onclick = boxMove;
 resetGameButton.onclick = resetGame
 dModeButton.onclick = difficultMode;
 darkMode.onclick = switchBackgroundColor;
-
