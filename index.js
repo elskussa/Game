@@ -204,6 +204,7 @@ github.style.textAlign = 'center';
 github.style.textDecoration = 'none';
 
 const footer = document.querySelector('footer');
+console.log(footer)
 footer.style.display = 'flex';
 footer.style.flexDirection = 'column';
 footer.style.justifyContent = 'center';
