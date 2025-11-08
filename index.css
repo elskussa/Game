@@ -153,10 +153,10 @@ button:hover {
     }
     
     .box, .box2 {
-        width: 16vw;  /* Aumentado de 14vw */
-        height: 16vw; /* Aumentado de 14vw */
-        max-width: 70px; /* Aumentado de 60px */
-        max-height: 70px; /* Aumentado de 60px */
+        width: 11vw;  /* Reducido de 12vw */
+        height: 11vw; /* Reducido de 12vw */
+        max-width: 55px; /* Reducido de 65px */
+        max-height: 55px; /* Reducido de 65px */
     }
     
     button {
@@ -172,7 +172,7 @@ button:hover {
     }
 }
 
-/* Media Queries para móviles - CAJAS MÁS GRANDES */
+/* Media Queries para móviles - CAJAS MÁS PEQUEÑAS */
 @media (max-width: 480px) {
     body {
         padding: 8px;
@@ -202,12 +202,12 @@ button:hover {
     }
     
     .box, .box2 {
-        width: 22vw;  /* Aumentado significativamente de 16vw */
-        height: 22vw; /* Aumentado significativamente de 16vw */
-        max-width: 80px; /* Aumentado de 55px */
-        max-height: 80px; /* Aumentado de 55px */
-        min-width: 50px; /* Aumentado de 35px */
-        min-height: 50px; /* Aumentado de 35px */
+        width: 10vw;  /* Reducido significativamente */
+        height: 10vw; /* Reducido significativamente */
+        max-width: 40px; /* Reducido de 65px */
+        max-height: 40px; /* Reducido de 65px */
+        min-width: 30px; /* Reducido de 45px */
+        min-height: 30px; /* Reducido de 45px */
     }
     
     .buttons {
@@ -231,7 +231,7 @@ button:hover {
     }
 }
 
-/* Media Queries para móviles muy pequeños - CAJAS AÚN MÁS GRANDES */
+/* Media Queries para móviles muy pequeños - CAJAS AÚN MÁS PEQUEÑAS */
 @media (max-width: 360px) {
     body {
         padding: 5px;
@@ -251,12 +251,12 @@ button:hover {
     }
     
     .box, .box2 {
-        width: 24vw;  /* Aumentado de 18vw */
-        height: 24vw; /* Aumentado de 18vw */
-        max-width: 75px; /* Aumentado de 50px */
-        max-height: 75px; /* Aumentado de 50px */
-        min-width: 55px; /* Aumentado de 40px */
-        min-height: 55px; /* Aumentado de 40px */
+        width: 9vw;  /* Reducido aún más */
+        height: 9vw; /* Reducido aún más */
+        max-width: 35px; /* Reducido de 65px */
+        max-height: 35px; /* Reducido de 65px */
+        min-width: 25px; /* Reducido de 45px */
+        min-height: 25px; /* Reducido de 45px */
     }
     
     button {
