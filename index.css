@@ -153,8 +153,10 @@ button:hover {
     }
     
     .box, .box2 {
-        width: 14vw;
-        height: 14vw;
+        width: 16vw;  /* Aumentado de 14vw */
+        height: 16vw; /* Aumentado de 14vw */
+        max-width: 70px; /* Aumentado de 60px */
+        max-height: 70px; /* Aumentado de 60px */
     }
     
     button {
@@ -170,7 +172,7 @@ button:hover {
     }
 }
 
-/* Media Queries para móviles - INTERFAZ MÁS PEQUEÑA */
+/* Media Queries para móviles - CAJAS MÁS GRANDES */
 @media (max-width: 480px) {
     body {
         padding: 8px;
@@ -192,20 +194,20 @@ button:hover {
     }
     
     .window {
-        width: 75vw;  /* Reducido de 100vw */
-        height: 75vw; /* Reducido de 100vw */
-        max-width: 350px; /* Reducido de 400px */
-        max-height: 350px; /* Reducido de 400px */
+        width: 75vw;
+        height: 75vw;
+        max-width: 350px;
+        max-height: 350px;
         border-radius: 12px;
     }
     
     .box, .box2 {
-        width: 16vw;  /* Reducido */
-        height: 16vw; /* Reducido */
-        max-width: 55px; /* Reducido de 65px */
-        max-height: 55px; /* Reducido de 65px */
-        min-width: 35px; /* Reducido de 45px */
-        min-height: 35px; /* Reducido de 45px */
+        width: 22vw;  /* Aumentado significativamente de 16vw */
+        height: 22vw; /* Aumentado significativamente de 16vw */
+        max-width: 80px; /* Aumentado de 55px */
+        max-height: 80px; /* Aumentado de 55px */
+        min-width: 50px; /* Aumentado de 35px */
+        min-height: 50px; /* Aumentado de 35px */
     }
     
     .buttons {
@@ -217,19 +219,19 @@ button:hover {
     
     button {
         width: 100%;
-        padding: 10px 12px; /* Reducido */
-        font-size: 13px; /* Reducido */
+        padding: 10px 12px;
+        font-size: 13px;
         min-width: auto;
         border-radius: 5px;
     }
     
     .ninoImg {
-        width: 70vw; /* Reducido de 95vw */
-        max-width: 300px; /* Reducido de 400px */
+        width: 70vw;
+        max-width: 300px;
     }
 }
 
-/* Media Queries para móviles muy pequeños */
+/* Media Queries para móviles muy pequeños - CAJAS AÚN MÁS GRANDES */
 @media (max-width: 360px) {
     body {
         padding: 5px;
@@ -249,10 +251,12 @@ button:hover {
     }
     
     .box, .box2 {
-        width: 18vw;
-        height: 18vw;
-        max-width: 50px;
-        max-height: 50px;
+        width: 24vw;  /* Aumentado de 18vw */
+        height: 24vw; /* Aumentado de 18vw */
+        max-width: 75px; /* Aumentado de 50px */
+        max-height: 75px; /* Aumentado de 50px */
+        min-width: 55px; /* Aumentado de 40px */
+        min-height: 55px; /* Aumentado de 40px */
     }
     
     button {
